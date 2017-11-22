@@ -54,7 +54,8 @@
     _window.toolbar.visible = YES;
     _window.titleVisibility = YES;
 //    _window.titlebarAppearsTransparent = YES;
-    [_window setBackgroundColor:[NSColor yellowColor]];
+    AxeClientConfig *clientConfig = [AxeClientConfig shareClientConfig];
+    [_window setBackgroundColor:[NSColor colorWithHexString:clientConfig.windowBgColor]];
     
 }
 

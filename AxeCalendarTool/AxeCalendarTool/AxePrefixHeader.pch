@@ -1,0 +1,18 @@
+//
+//  AxePrefixHeader.pch
+//  AxeCalendarTool
+//
+//  Created by GiantAxe on 17/11/22.
+//  Copyright © 2017年 GiantAxe. All rights reserved.
+//
+
+#ifndef AxePrefixHeader_pch
+#define AxePrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "AxeClientConfig.h"
+#import "NSColor+HexString.h"
+
+
+#endif /* AxePrefixHeader_pch */

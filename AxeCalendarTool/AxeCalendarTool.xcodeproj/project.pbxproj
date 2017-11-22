@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		55FE69C51FC5CF9100138967 /* AxeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FE69C41FC5CF9100138967 /* AxeAppDelegate.m */; };
+		55FE69C81FC5D2AB00138967 /* AxeClientConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FE69C71FC5D2AB00138967 /* AxeClientConfig.m */; };
+		55FE69CD1FC5D4C800138967 /* NSColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FE69CC1FC5D4C800138967 /* NSColor+HexString.m */; };
 		55FE9B1A1FC324F9001AF2CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FE9B191FC324F9001AF2CE /* main.m */; };
 		55FE9B1C1FC324F9001AF2CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55FE9B1B1FC324F9001AF2CE /* Assets.xcassets */; };
 		55FE9B1F1FC324F9001AF2CE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55FE9B1D1FC324F9001AF2CE /* MainMenu.xib */; };
@@ -16,6 +18,11 @@
 /* Begin PBXFileReference section */
 		55FE69C31FC5CF9100138967 /* AxeAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AxeAppDelegate.h; sourceTree = "<group>"; };
 		55FE69C41FC5CF9100138967 /* AxeAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AxeAppDelegate.m; sourceTree = "<group>"; };
+		55FE69C61FC5D2AB00138967 /* AxeClientConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AxeClientConfig.h; sourceTree = "<group>"; };
+		55FE69C71FC5D2AB00138967 /* AxeClientConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AxeClientConfig.m; sourceTree = "<group>"; };
+		55FE69CB1FC5D4C800138967 /* NSColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+HexString.h"; sourceTree = "<group>"; };
+		55FE69CC1FC5D4C800138967 /* NSColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+HexString.m"; sourceTree = "<group>"; };
+		55FE69CF1FC5D57400138967 /* AxePrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AxePrefixHeader.pch; sourceTree = "<group>"; };
 		55FE9B121FC324F9001AF2CE /* AxeCalendarTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AxeCalendarTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55FE9B191FC324F9001AF2CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		55FE9B1B1FC324F9001AF2CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -37,6 +44,8 @@
 		55FE69C01FC5CEF600138967 /* ClientConfig */ = {
 			isa = PBXGroup;
 			children = (
+				55FE69C61FC5D2AB00138967 /* AxeClientConfig.h */,
+				55FE69C71FC5D2AB00138967 /* AxeClientConfig.m */,
 			);
 			path = ClientConfig;
 			sourceTree = "<group>";
@@ -55,6 +64,15 @@
 				55FE69C41FC5CF9100138967 /* AxeAppDelegate.m */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		55FE69CA1FC5D4A000138967 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				55FE69CB1FC5D4C800138967 /* NSColor+HexString.h */,
+				55FE69CC1FC5D4C800138967 /* NSColor+HexString.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		55FE9B091FC324F9001AF2CE = {
@@ -76,6 +94,7 @@
 		55FE9B141FC324F9001AF2CE /* AxeCalendarTool */ = {
 			isa = PBXGroup;
 			children = (
+				55FE69CA1FC5D4A000138967 /* Category */,
 				55FE69C21FC5CF9100138967 /* AppDelegate */,
 				55FE69C11FC5CF2B00138967 /* AxeCalendarTool */,
 				55FE69C01FC5CEF600138967 /* ClientConfig */,
@@ -91,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				55FE9B191FC324F9001AF2CE /* main.m */,
+				55FE69CF1FC5D57400138967 /* AxePrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -165,6 +185,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55FE69C81FC5D2AB00138967 /* AxeClientConfig.m in Sources */,
+				55FE69CD1FC5D4C800138967 /* NSColor+HexString.m in Sources */,
 				55FE9B1A1FC324F9001AF2CE /* main.m in Sources */,
 				55FE69C51FC5CF9100138967 /* AxeAppDelegate.m in Sources */,
 			);
@@ -276,6 +298,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREFIX_HEADER = /Users/GiantAxe/Desktop/AxeCalendarTool/AxeCalendarTool/AxeCalendarTool/AxePrefixHeader.pch;
 				INFOPLIST_FILE = AxeCalendarTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.helloworld.AxeCalendarTool;
@@ -288,6 +311,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREFIX_HEADER = /Users/GiantAxe/Desktop/AxeCalendarTool/AxeCalendarTool/AxeCalendarTool/AxePrefixHeader.pch;
 				INFOPLIST_FILE = AxeCalendarTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.helloworld.AxeCalendarTool;
