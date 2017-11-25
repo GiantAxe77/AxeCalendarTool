@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		550090891FC9C47100E9892F /* AxeMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 550090881FC9C47100E9892F /* AxeMainWindowController.m */; };
 		55FE69C51FC5CF9100138967 /* AxeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FE69C41FC5CF9100138967 /* AxeAppDelegate.m */; };
 		55FE69C81FC5D2AB00138967 /* AxeClientConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FE69C71FC5D2AB00138967 /* AxeClientConfig.m */; };
 		55FE69CD1FC5D4C800138967 /* NSColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FE69CC1FC5D4C800138967 /* NSColor+HexString.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		550090871FC9C47100E9892F /* AxeMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AxeMainWindowController.h; sourceTree = "<group>"; };
+		550090881FC9C47100E9892F /* AxeMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AxeMainWindowController.m; sourceTree = "<group>"; };
 		55FE69C31FC5CF9100138967 /* AxeAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AxeAppDelegate.h; sourceTree = "<group>"; };
 		55FE69C41FC5CF9100138967 /* AxeAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AxeAppDelegate.m; sourceTree = "<group>"; };
 		55FE69C61FC5D2AB00138967 /* AxeClientConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AxeClientConfig.h; sourceTree = "<group>"; };
@@ -41,6 +44,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		550090831FC9C32400E9892F /* MainWindow */ = {
+			isa = PBXGroup;
+			children = (
+				550090871FC9C47100E9892F /* AxeMainWindowController.h */,
+				550090881FC9C47100E9892F /* AxeMainWindowController.m */,
+			);
+			path = MainWindow;
+			sourceTree = "<group>";
+		};
 		55FE69C01FC5CEF600138967 /* ClientConfig */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +106,7 @@
 		55FE9B141FC324F9001AF2CE /* AxeCalendarTool */ = {
 			isa = PBXGroup;
 			children = (
+				550090831FC9C32400E9892F /* MainWindow */,
 				55FE69CA1FC5D4A000138967 /* Category */,
 				55FE69C21FC5CF9100138967 /* AppDelegate */,
 				55FE69C11FC5CF2B00138967 /* AxeCalendarTool */,
@@ -186,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55FE69C81FC5D2AB00138967 /* AxeClientConfig.m in Sources */,
+				550090891FC9C47100E9892F /* AxeMainWindowController.m in Sources */,
 				55FE69CD1FC5D4C800138967 /* NSColor+HexString.m in Sources */,
 				55FE9B1A1FC324F9001AF2CE /* main.m in Sources */,
 				55FE69C51FC5CF9100138967 /* AxeAppDelegate.m in Sources */,
