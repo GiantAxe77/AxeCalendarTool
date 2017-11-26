@@ -34,7 +34,7 @@
 
 - (void)applicationWillTerminate:(NSNotification *)notification
 {
-    
+    NSLog(@"app退出");
 }
 
 - (void)dealloc
