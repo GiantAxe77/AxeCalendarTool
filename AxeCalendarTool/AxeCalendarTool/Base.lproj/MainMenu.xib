@@ -13,7 +13,11 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="Voe-Tx-rLC" customClass="AxeAppDelegate"/>
+        <customObject id="Voe-Tx-rLC" customClass="AxeAppDelegate">
+            <connections>
+                <outlet property="window" destination="QvC-M9-y7g" id="Nzf-AT-pd5"/>
+            </connections>
+        </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
@@ -107,6 +111,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
             </view>
+            <connections>
+                <outlet property="delegate" destination="a4v-Cr-Dc4" id="o74-cV-pUO"/>
+            </connections>
         </window>
         <customObject id="a4v-Cr-Dc4" customClass="AxeMainWindowController"/>
     </objects>

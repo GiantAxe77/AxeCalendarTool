@@ -10,8 +10,6 @@
 
 @interface AxeAppDelegate ()
 
-@property (weak) IBOutlet NSWindow *window;
-
 @end
 
 @implementation AxeAppDelegate
@@ -42,6 +40,8 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+
+
 // ===============================================================
 //                          setup
 // ===============================================================
@@ -56,7 +56,7 @@
 //    _window.titlebarAppearsTransparent = YES;
     AxeClientConfig *clientConfig = [AxeClientConfig shareClientConfig];
     [_window setBackgroundColor:[NSColor colorWithHexString:clientConfig.windowBgColor]];
-    
+
 }
 
 // ===============================================================

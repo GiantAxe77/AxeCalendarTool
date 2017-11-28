@@ -10,6 +10,5 @@
 
 @interface AxeMainWindowController : NSWindowController
 
-@property (weak) IBOutlet NSWindow *window;
 
 @end
