@@ -114,6 +114,7 @@
             <connections>
                 <outlet property="delegate" destination="a4v-Cr-Dc4" id="o74-cV-pUO"/>
             </connections>
+            <point key="canvasLocation" x="-105" y="133"/>
         </window>
         <customObject id="a4v-Cr-Dc4" customClass="AxeMainWindowController"/>
     </objects>

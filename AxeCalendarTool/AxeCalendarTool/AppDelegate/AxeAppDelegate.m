@@ -28,11 +28,32 @@
     [[NSDistributedNotificationCenter defaultCenter] addObserver:self selector:@selector(screenIsLocked:) name:@"com.apple.screenIsLocked" object:nil];
     // 屏幕解锁通知
     [[NSDistributedNotificationCenter defaultCenter] addObserver:self selector:@selector(screenIsUnlocked:) name:@"com.apple.screenIsUnlocked" object:nil];
+    
+    NSLog(@"%p", ((AxeAppDelegate *)[NSApplication sharedApplication].delegate).window);
+    NSLog(@"%p", self.window);
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification
 {
     NSLog(@"app退出");
+}
+
++ (void)initialize {
+
+}
+
+- (id)init {
+    self = [super init];
+    if (self) {
+
+    }
+    return self;
+}
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+
 }
 
 - (void)dealloc
