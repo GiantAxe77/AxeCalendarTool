@@ -31,6 +31,7 @@
     
     NSLog(@"%p", ((AxeAppDelegate *)[NSApplication sharedApplication].delegate).window);
     NSLog(@"%p", self.window);
+    AxeLog(@"Test log");
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification
