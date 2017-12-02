@@ -94,6 +94,7 @@
 		55FE9B141FC324F9001AF2CE /* AxeCalendarTool */ = {
 			isa = PBXGroup;
 			children = (
+				E772C2191FD2374400659BB2 /* Global */,
 				55FE69CA1FC5D4A000138967 /* Category */,
 				55FE69C21FC5CF9100138967 /* AppDelegate */,
 				55FE69C11FC5CF2B00138967 /* AxeCalendarTool */,
@@ -113,6 +114,13 @@
 				55FE69CF1FC5D57400138967 /* AxePrefixHeader.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E772C2191FD2374400659BB2 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Global;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
