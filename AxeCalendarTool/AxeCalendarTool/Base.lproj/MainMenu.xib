@@ -15,6 +15,7 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AxeAppDelegate">
             <connections>
+                <outlet property="bgView" destination="w01-WJ-gsy" id="lw4-vo-PxN"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="Nzf-AT-pd5"/>
             </connections>
         </customObject>
@@ -102,7 +103,7 @@
             <point key="canvasLocation" x="142" y="-150"/>
         </menu>
         <window title="AxeCalendarTool" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="360"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
@@ -110,6 +111,49 @@
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="w01-WJ-gsy">
+                        <rect key="frame" x="20" y="20" width="440" height="320"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0iE-6Z-ZwA">
+                                <rect key="frame" x="24" y="274" width="66" height="32"/>
+                                <buttonCell key="cell" type="push" title="Last" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" inset="2" id="oF7-1P-m5p">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nNJ-KJ-YJU">
+                                <rect key="frame" x="184" y="283" width="73" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="2017年12月" id="Irz-9C-0ub">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Y8N-hZ-vTI">
+                                <rect key="frame" x="347" y="274" width="69" height="32"/>
+                                <buttonCell key="cell" type="push" title="Next" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="C4a-FH-I5u">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="nNJ-KJ-YJU" firstAttribute="top" secondItem="w01-WJ-gsy" secondAttribute="top" constant="20" id="51E-cr-ahd"/>
+                            <constraint firstItem="nNJ-KJ-YJU" firstAttribute="centerX" secondItem="w01-WJ-gsy" secondAttribute="centerX" id="AUU-Tt-j7U"/>
+                            <constraint firstAttribute="trailing" secondItem="Y8N-hZ-vTI" secondAttribute="trailing" constant="30" id="FyV-p9-w7S"/>
+                            <constraint firstItem="0iE-6Z-ZwA" firstAttribute="leading" secondItem="w01-WJ-gsy" secondAttribute="leading" constant="30" id="Y8i-KR-Yry"/>
+                            <constraint firstItem="0iE-6Z-ZwA" firstAttribute="centerY" secondItem="nNJ-KJ-YJU" secondAttribute="centerY" id="g6t-Zz-4Dj"/>
+                            <constraint firstItem="Y8N-hZ-vTI" firstAttribute="centerY" secondItem="nNJ-KJ-YJU" secondAttribute="centerY" id="kbH-yW-utl"/>
+                        </constraints>
+                    </customView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="w01-WJ-gsy" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="Nz8-La-c7h"/>
+                    <constraint firstAttribute="bottom" secondItem="w01-WJ-gsy" secondAttribute="bottom" constant="20" id="gLY-uV-6wX"/>
+                    <constraint firstAttribute="trailing" secondItem="w01-WJ-gsy" secondAttribute="trailing" constant="20" id="iVC-YH-ks0"/>
+                    <constraint firstItem="w01-WJ-gsy" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="rJk-ke-7TD"/>
+                </constraints>
             </view>
             <connections>
                 <outlet property="delegate" destination="a4v-Cr-Dc4" id="o74-cV-pUO"/>

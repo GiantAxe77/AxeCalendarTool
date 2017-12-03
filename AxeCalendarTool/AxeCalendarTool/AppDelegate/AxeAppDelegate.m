@@ -10,6 +10,9 @@
 
 @interface AxeAppDelegate ()
 
+/** 背景view */
+@property (weak) IBOutlet NSView *bgView;
+
 @end
 
 @implementation AxeAppDelegate
@@ -39,6 +42,12 @@
     NSLog(@"app退出");
 }
 
+// ===============================================================
+//                          life cycle
+// ===============================================================
+
+#pragma mark - life cycle
+
 + (void)initialize {
 
 }
@@ -46,7 +55,7 @@
 - (id)init {
     self = [super init];
     if (self) {
-
+        
     }
     return self;
 }
@@ -54,7 +63,10 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-
+    self.bgView.wantsLayer = YES;
+    self.bgView.layer.backgroundColor = [NSColor colorWithRed:250/255.0 green:177/255.0 blue:45/255.0 alpha:1].CGColor;
+    //[NSColor colorWithHexString:@"#121212"].CGColor;
+    
 }
 
 - (void)dealloc
