@@ -12,6 +12,8 @@
 
 /** 背景view */
 @property (weak) IBOutlet NSView *bgView;
+@property (weak) IBOutlet NSButton *lastBtn;
+@property (weak) IBOutlet NSButton *nextBtn;
 
 @end
 
@@ -32,9 +34,6 @@
     // 屏幕解锁通知
     [[NSDistributedNotificationCenter defaultCenter] addObserver:self selector:@selector(screenIsUnlocked:) name:@"com.apple.screenIsUnlocked" object:nil];
     
-    NSLog(@"%p", ((AxeAppDelegate *)[NSApplication sharedApplication].delegate).window);
-    NSLog(@"%p", self.window);
-    AxeLog(@"Test log");
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification

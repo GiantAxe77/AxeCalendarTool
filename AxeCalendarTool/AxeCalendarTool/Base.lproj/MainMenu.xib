@@ -16,6 +16,8 @@
         <customObject id="Voe-Tx-rLC" customClass="AxeAppDelegate">
             <connections>
                 <outlet property="bgView" destination="w01-WJ-gsy" id="lw4-vo-PxN"/>
+                <outlet property="lastBtn" destination="0iE-6Z-ZwA" id="MVi-qD-Wbl"/>
+                <outlet property="nextBtn" destination="Y8N-hZ-vTI" id="G9g-Rv-X8I"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="Nzf-AT-pd5"/>
             </connections>
         </customObject>
