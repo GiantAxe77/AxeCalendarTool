@@ -15,6 +15,8 @@
 @property (weak) IBOutlet NSButton *lastBtn;
 @property (weak) IBOutlet NSButton *nextBtn;
 
+@property (nonatomic, strong) NSStatusItem *statusItem;
+
 @end
 
 @implementation AxeAppDelegate
@@ -39,6 +41,8 @@
 - (void)applicationWillTerminate:(NSNotification *)notification
 {
     NSLog(@"app退出");
+    NSStatusBar *statusBar = [NSStatusBar systemStatusBar];
+    [statusBar removeStatusItem:self.statusItem];
 }
 
 // ===============================================================
@@ -66,6 +70,12 @@
     self.bgView.layer.backgroundColor = [NSColor colorWithRed:250/255.0 green:177/255.0 blue:45/255.0 alpha:1].CGColor;
     //[NSColor colorWithHexString:@"#121212"].CGColor;
     
+    NSStatusBar *statusBar = [NSStatusBar systemStatusBar];
+    NSStatusItem *statusItem = [statusBar statusItemWithLength:NSSquareStatusItemLength];
+    [statusItem.button setTarget:self];
+    [statusItem.button setAction:@selector(statusItemClick:)];
+//    statusItem.button.image = [NSImage imageNamed:@"icon_apple"];
+    self.statusItem = statusItem;
 }
 
 - (void)dealloc
@@ -97,6 +107,12 @@
 // ===============================================================
 
 #pragma mark - 事件处理
+
+- (void)statusItemClick:(NSStatusItem *)item
+{
+    AxeLog(@"coming");
+    [[NSRunningApplication currentApplication] activateWithOptions:NSApplicationActivateAllWindows | NSApplicationActivateIgnoringOtherApps];
+}
 
 - (void)screenIsLocked:(NSNotification *)noti
 {
