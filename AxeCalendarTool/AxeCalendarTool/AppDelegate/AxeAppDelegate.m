@@ -74,7 +74,7 @@
     NSStatusItem *statusItem = [statusBar statusItemWithLength:NSSquareStatusItemLength];
     [statusItem.button setTarget:self];
     [statusItem.button setAction:@selector(statusItemClick:)];
-//    statusItem.button.image = [NSImage imageNamed:@"icon_apple"];
+    statusItem.button.image = [NSImage imageNamed:@"tim"];
     self.statusItem = statusItem;
 }
 
