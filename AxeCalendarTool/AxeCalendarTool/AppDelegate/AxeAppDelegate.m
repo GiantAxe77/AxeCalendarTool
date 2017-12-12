@@ -16,6 +16,7 @@
 @property (weak) IBOutlet NSButton *nextBtn;
 
 @property (nonatomic, strong) NSStatusItem *statusItem;
+@property (nonatomic, strong) NSPopover *popover;
 
 @end
 
@@ -74,7 +75,7 @@
     NSStatusItem *statusItem = [statusBar statusItemWithLength:NSSquareStatusItemLength];
     [statusItem.button setTarget:self];
     [statusItem.button setAction:@selector(statusItemClick:)];
-    statusItem.button.image = [NSImage imageNamed:@"tim"];
+    statusItem.button.image = [NSImage imageNamed:@"Koala_24px"];
     self.statusItem = statusItem;
 }
 
