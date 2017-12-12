@@ -7,6 +7,7 @@
 //
 
 #import "AxeAppDelegate.h"
+#import "AxePopoverVC.h"
 
 @interface AxeAppDelegate ()
 
@@ -17,6 +18,7 @@
 
 @property (nonatomic, strong) NSStatusItem *statusItem;
 @property (nonatomic, strong) NSPopover *popover;
+@property (nonatomic, strong) AxePopoverVC *popoverVC;
 
 @end
 
@@ -36,6 +38,22 @@
     [[NSDistributedNotificationCenter defaultCenter] addObserver:self selector:@selector(screenIsLocked:) name:@"com.apple.screenIsLocked" object:nil];
     // 屏幕解锁通知
     [[NSDistributedNotificationCenter defaultCenter] addObserver:self selector:@selector(screenIsUnlocked:) name:@"com.apple.screenIsUnlocked" object:nil];
+    
+    self.bgView.wantsLayer = YES;
+    self.bgView.layer.backgroundColor = [NSColor colorWithRed:250/255.0 green:177/255.0 blue:45/255.0 alpha:1].CGColor;
+    //[NSColor colorWithHexString:@"#121212"].CGColor;
+
+    _popover = [[NSPopover alloc] init];
+    _popover.behavior = NSPopoverBehaviorApplicationDefined;
+    _popover.appearance = [NSAppearance appearanceNamed:NSAppearanceNameVibrantDark];
+    _popover.contentViewController = self.popoverVC;
+    
+    NSStatusBar *statusBar = [NSStatusBar systemStatusBar];
+    NSStatusItem *statusItem = [statusBar statusItemWithLength:NSSquareStatusItemLength];
+    [statusItem.button setTarget:self];
+    [statusItem.button setAction:@selector(statusItemClick:)];
+    statusItem.button.image = [NSImage imageNamed:@"Koala_24px"];
+    self.statusItem = statusItem;
     
 }
 
@@ -67,16 +85,6 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    self.bgView.wantsLayer = YES;
-    self.bgView.layer.backgroundColor = [NSColor colorWithRed:250/255.0 green:177/255.0 blue:45/255.0 alpha:1].CGColor;
-    //[NSColor colorWithHexString:@"#121212"].CGColor;
-    
-    NSStatusBar *statusBar = [NSStatusBar systemStatusBar];
-    NSStatusItem *statusItem = [statusBar statusItemWithLength:NSSquareStatusItemLength];
-    [statusItem.button setTarget:self];
-    [statusItem.button setAction:@selector(statusItemClick:)];
-    statusItem.button.image = [NSImage imageNamed:@"Koala_24px"];
-    self.statusItem = statusItem;
 }
 
 - (void)dealloc
@@ -84,7 +92,19 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+// ===============================================================
+//                          lazy
+// ===============================================================
 
+#pragma mark - lazy 
+
+- (AxePopoverVC *)popoverVC
+{
+    if (!_popoverVC) {
+        _popoverVC = [[AxePopoverVC alloc] initWithNibName:@"AxePopoverVC" bundle:nil];
+    }
+    return _popoverVC;
+}
 
 // ===============================================================
 //                          setup
@@ -109,10 +129,11 @@
 
 #pragma mark - 事件处理
 
-- (void)statusItemClick:(NSStatusItem *)item
+- (void)statusItemClick:(NSStatusBarButton *)btn
 {
     AxeLog(@"coming");
-    [[NSRunningApplication currentApplication] activateWithOptions:NSApplicationActivateAllWindows | NSApplicationActivateIgnoringOtherApps];
+//    [[NSRunningApplication currentApplication] activateWithOptions:NSApplicationActivateAllWindows | NSApplicationActivateIgnoringOtherApps];
+    [_popover showRelativeToRect:btn.bounds ofView:btn preferredEdge:NSRectEdgeMaxY];
 }
 
 - (void)screenIsLocked:(NSNotification *)noti

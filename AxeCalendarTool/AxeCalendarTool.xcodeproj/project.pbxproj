@@ -10,6 +10,8 @@
 		550090891FC9C47100E9892F /* AxeMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 550090881FC9C47100E9892F /* AxeMainWindowController.m */; };
 		554F254D1FCC694000C87866 /* NSButton+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 554F254C1FCC694000C87866 /* NSButton+Color.m */; };
 		554F25501FCC698D00C87866 /* NSView+Rect.m in Sources */ = {isa = PBXBuildFile; fileRef = 554F254F1FCC698D00C87866 /* NSView+Rect.m */; };
+		55971CE91FE000520098A860 /* AxePopoverVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55971CE71FE000520098A860 /* AxePopoverVC.m */; };
+		55971CEA1FE000520098A860 /* AxePopoverVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55971CE81FE000520098A860 /* AxePopoverVC.xib */; };
 		55FE69C51FC5CF9100138967 /* AxeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FE69C41FC5CF9100138967 /* AxeAppDelegate.m */; };
 		55FE69C81FC5D2AB00138967 /* AxeClientConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FE69C71FC5D2AB00138967 /* AxeClientConfig.m */; };
 		55FE69CD1FC5D4C800138967 /* NSColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FE69CC1FC5D4C800138967 /* NSColor+HexString.m */; };
@@ -25,6 +27,9 @@
 		554F254C1FCC694000C87866 /* NSButton+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSButton+Color.m"; sourceTree = "<group>"; };
 		554F254E1FCC698D00C87866 /* NSView+Rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+Rect.h"; sourceTree = "<group>"; };
 		554F254F1FCC698D00C87866 /* NSView+Rect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+Rect.m"; sourceTree = "<group>"; };
+		55971CE61FE000520098A860 /* AxePopoverVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AxePopoverVC.h; sourceTree = "<group>"; };
+		55971CE71FE000520098A860 /* AxePopoverVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AxePopoverVC.m; sourceTree = "<group>"; };
+		55971CE81FE000520098A860 /* AxePopoverVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AxePopoverVC.xib; sourceTree = "<group>"; };
 		55FE69C31FC5CF9100138967 /* AxeAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AxeAppDelegate.h; sourceTree = "<group>"; };
 		55FE69C41FC5CF9100138967 /* AxeAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AxeAppDelegate.m; sourceTree = "<group>"; };
 		55FE69C61FC5D2AB00138967 /* AxeClientConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AxeClientConfig.h; sourceTree = "<group>"; };
@@ -60,6 +65,30 @@
 			path = MainWindow;
 			sourceTree = "<group>";
 		};
+		55971CE31FE000140098A860 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				55971CE61FE000520098A860 /* AxePopoverVC.h */,
+				55971CE71FE000520098A860 /* AxePopoverVC.m */,
+				55971CE81FE000520098A860 /* AxePopoverVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		55971CE41FE000140098A860 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		55971CE51FE000140098A860 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		55FE69C01FC5CEF600138967 /* ClientConfig */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +101,9 @@
 		55FE69C11FC5CF2B00138967 /* AxeCalendarTool */ = {
 			isa = PBXGroup;
 			children = (
+				55971CE31FE000140098A860 /* Controller */,
+				55971CE41FE000140098A860 /* Model */,
+				55971CE51FE000140098A860 /* View */,
 			);
 			path = AxeCalendarTool;
 			sourceTree = "<group>";
@@ -207,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55FE9B1C1FC324F9001AF2CE /* Assets.xcassets in Resources */,
+				55971CEA1FE000520098A860 /* AxePopoverVC.xib in Resources */,
 				55FE9B1F1FC324F9001AF2CE /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,6 +254,7 @@
 				554F254D1FCC694000C87866 /* NSButton+Color.m in Sources */,
 				55FE69C81FC5D2AB00138967 /* AxeClientConfig.m in Sources */,
 				550090891FC9C47100E9892F /* AxeMainWindowController.m in Sources */,
+				55971CE91FE000520098A860 /* AxePopoverVC.m in Sources */,
 				55FE69CD1FC5D4C800138967 /* NSColor+HexString.m in Sources */,
 				55FE9B1A1FC324F9001AF2CE /* main.m in Sources */,
 				55FE69C51FC5CF9100138967 /* AxeAppDelegate.m in Sources */,
